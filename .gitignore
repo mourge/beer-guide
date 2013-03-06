@@ -2,3 +2,5 @@
 *.iml
 *.iws
 target/
+project/target/*
+log/*
