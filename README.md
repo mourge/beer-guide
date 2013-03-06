@@ -16,9 +16,9 @@ Main objectives of this project:
 
 
 The basic idea that I'll be working towards with this project:
- * initial minimal-formatted output for <hostname>/style
- * secondary formatted output http://<hostname>/style/fermentor to scope output
- * secondary formatted output http://<hostname>/style/kegerator to scope output
+ * initial minimal-formatted output for [hostname]/style
+ * secondary formatted output http://[hostname]/style/fermentor to scope output
+ * secondary formatted output http://[hostname]/style/kegerator to scope output
 
 Over time, expecation will be that I'll work on my netduino-based kits for interpreting output from server and attaching the necessary electonics to adjust pressure and temperature for the homebrew kits.
 Second, I'm hoping to build up to making something presentable for user-facing webapp.
