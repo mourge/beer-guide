@@ -1,38 +1,27 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/pjohnson/beer/project/}default-faf2ad...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/pjohnson/beer-guide/project/}default-c8ee57...[0m
 [0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m:: resolving dependencies :: default#default-faf2ad;0.1-SNAPSHOT[0m
+[0m[[0mdebug[0m] [0m:: resolving dependencies :: default#default-c8ee57;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
 [0m[[0mdebug[0m] [0m	refresh = false[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-plugin;2.1.0 of rootConf=compile[0m
 [0m[[0mdebug[0m] [0m	using sbt-chain to resolve play#sbt-plugin;2.1.0[0m
 [0m[[0minfo[0m] [0mResolving play#sbt-plugin;2.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: play#sbt-plugin;2.1.0 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: no namespace defined: using system[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-plugin;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#sbt-plugin;2.1.0 (resolved by typesafe-ivy-releases): /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: play#sbt-plugin;2.1.0[0m
 [0m[[0mdebug[0m] [0msbt-chain: no latest strategy defined: using default[0m
 [0m[[0mdebug[0m] [0mtypesafe-ivy-releases: no namespace defined: using system[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-plugin;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for play#sbt-plugin;2.1.0[0m
-[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml (2.1.0)[0m
-[0m[[0mdebug[0m] [0m	parser = ivy parser[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-plugin;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml ...[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		to /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml.original.part[0m
-[0m[[0mdebug[0m] [0msha1 file found for http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml: checking...[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml.sha1[0m
-[0m[[0mdebug[0m] [0m		to /var/folders/f5/04xy76_x16q08xftx4_j2f800000gn/T/ivytmp7752375453191014819sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] play#sbt-plugin;2.1.0!ivy.xml(ivy.original) (616ms)[0m
-[0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m	default-cache: parsed downloaded md file for play#sbt-plugin;2.1.0; parsed=play#sbt-plugin;2.1.0[0m
+[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#sbt-plugin;2.1.0 (resolved by typesafe-ivy-releases): /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: play#sbt-plugin;2.1.0[0m
 [0m[[0mdebug[0m] [0m	checking play#sbt-plugin;2.1.0 from typesafe-ivy-releases against [none][0m
 [0m[[0mdebug[0m] [0m	module revision kept as first found: play#sbt-plugin;2.1.0 from typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m	found play#sbt-plugin;2.1.0 in typesafe-ivy-releases[0m
@@ -41,33 +30,13 @@
 [0m[[0mdebug[0m] [0m	using sbt-chain to resolve play#sbt-link;2.1.0[0m
 [0m[[0minfo[0m] [0mResolving play#sbt-link;2.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: play#sbt-link;2.1.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-link;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-link;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: resource not reachable for play#sbt-link;2.1.0: res=http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for play#sbt-link;2.1.0[0m
-[0m[[0mdebug[0m] [0msbt-plugin-releases: no namespace defined: using system[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-link;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: resource not reachable for play#sbt-link;2.1.0: res=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for play#sbt-link;2.1.0[0m
-[0m[[0mdebug[0m] [0mlocal: no namespace defined: using system[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-link;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/sbt-link/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: found md file for play#sbt-link;2.1.0[0m
-[0m[[0mdebug[0m] [0m		=> /Users/pjohnson/play-2.1.0/repository/local/play/sbt-link/2.1.0/ivys/ivy.xml (2.1.0)[0m
-[0m[[0mdebug[0m] [0m	parser = ivy parser[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#sbt-link;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#sbt-link;2.1.0!ivy.xml(ivy.original)[0m
+[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
 [0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m	default-cache: parsed downloaded md file for play#sbt-link;2.1.0; parsed=play#sbt-link;2.1.0[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#sbt-link;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: play#sbt-link;2.1.0[0m
+[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#sbt-link;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/sbt-link/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: play#sbt-link;2.1.0[0m
 [0m[[0mdebug[0m] [0m	checking play#sbt-link;2.1.0 from local against [none][0m
 [0m[[0mdebug[0m] [0m	module revision kept as first found: play#sbt-link;2.1.0 from local[0m
 [0m[[0mdebug[0m] [0m	found play#sbt-link;2.1.0 in local[0m
@@ -98,31 +67,13 @@
 [0m[[0mdebug[0m] [0m	using sbt-chain to resolve play#play-exceptions;2.1.0[0m
 [0m[[0minfo[0m] [0mResolving play#play-exceptions;2.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: play#play-exceptions;2.1.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#play-exceptions;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#play-exceptions;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo.typesafe.com/typesafe/ivy-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://repo.typesafe.com/typesafe/ivy-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: resource not reachable for play#play-exceptions;2.1.0: res=http://repo.typesafe.com/typesafe/ivy-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for play#play-exceptions;2.1.0[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#play-exceptions;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: resource not reachable for play#play-exceptions;2.1.0: res=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for play#play-exceptions;2.1.0[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#play-exceptions;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/play-exceptions/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: found md file for play#play-exceptions;2.1.0[0m
-[0m[[0mdebug[0m] [0m		=> /Users/pjohnson/play-2.1.0/repository/local/play/play-exceptions/2.1.0/ivys/ivy.xml (2.1.0)[0m
-[0m[[0mdebug[0m] [0m	parser = ivy parser[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#play-exceptions;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#play-exceptions;2.1.0!ivy.xml(ivy.original)[0m
+[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
 [0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m	default-cache: parsed downloaded md file for play#play-exceptions;2.1.0; parsed=play#play-exceptions;2.1.0[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#play-exceptions;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: play#play-exceptions;2.1.0[0m
+[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#play-exceptions;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/play-exceptions/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: play#play-exceptions;2.1.0[0m
 [0m[[0mdebug[0m] [0m	checking play#play-exceptions;2.1.0 from local against [none][0m
 [0m[[0mdebug[0m] [0m	module revision kept as first found: play#play-exceptions;2.1.0 from local[0m
 [0m[[0mdebug[0m] [0m	found play#play-exceptions;2.1.0 in local[0m
@@ -131,31 +82,13 @@
 [0m[[0mdebug[0m] [0m	using sbt-chain to resolve play#routes-compiler_2.9.2;2.1.0[0m
 [0m[[0minfo[0m] [0mResolving play#routes-compiler_2.9.2;2.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: play#routes-compiler_2.9.2;2.1.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#routes-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#routes-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo.typesafe.com/typesafe/ivy-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://repo.typesafe.com/typesafe/ivy-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: resource not reachable for play#routes-compiler_2.9.2;2.1.0: res=http://repo.typesafe.com/typesafe/ivy-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for play#routes-compiler_2.9.2;2.1.0[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#routes-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: resource not reachable for play#routes-compiler_2.9.2;2.1.0: res=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for play#routes-compiler_2.9.2;2.1.0[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#routes-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: found md file for play#routes-compiler_2.9.2;2.1.0[0m
-[0m[[0mdebug[0m] [0m		=> /Users/pjohnson/play-2.1.0/repository/local/play/routes-compiler_2.9.2/2.1.0/ivys/ivy.xml (2.1.0)[0m
-[0m[[0mdebug[0m] [0m	parser = ivy parser[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#routes-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#routes-compiler_2.9.2;2.1.0!ivy.xml(ivy.original)[0m
+[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
 [0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m	default-cache: parsed downloaded md file for play#routes-compiler_2.9.2;2.1.0; parsed=play#routes-compiler_2.9.2;2.1.0[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#routes-compiler_2.9.2;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: play#routes-compiler_2.9.2;2.1.0[0m
+[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#routes-compiler_2.9.2;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/routes-compiler_2.9.2/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: play#routes-compiler_2.9.2;2.1.0[0m
 [0m[[0mdebug[0m] [0m	checking play#routes-compiler_2.9.2;2.1.0 from local against [none][0m
 [0m[[0mdebug[0m] [0m	module revision kept as first found: play#routes-compiler_2.9.2;2.1.0 from local[0m
 [0m[[0mdebug[0m] [0m	found play#routes-compiler_2.9.2;2.1.0 in local[0m
@@ -325,31 +258,13 @@
 [0m[[0mdebug[0m] [0m	using sbt-chain to resolve play#templates-compiler_2.9.2;2.1.0[0m
 [0m[[0minfo[0m] [0mResolving play#templates-compiler_2.9.2;2.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: play#templates-compiler_2.9.2;2.1.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#templates-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#templates-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo.typesafe.com/typesafe/ivy-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://repo.typesafe.com/typesafe/ivy-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: resource not reachable for play#templates-compiler_2.9.2;2.1.0: res=http://repo.typesafe.com/typesafe/ivy-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for play#templates-compiler_2.9.2;2.1.0[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#templates-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mHTTP response status: 404 url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: resource not reachable for play#templates-compiler_2.9.2;2.1.0: res=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for play#templates-compiler_2.9.2;2.1.0[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#templates-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: found md file for play#templates-compiler_2.9.2;2.1.0[0m
-[0m[[0mdebug[0m] [0m		=> /Users/pjohnson/play-2.1.0/repository/local/play/templates-compiler_2.9.2/2.1.0/ivys/ivy.xml (2.1.0)[0m
-[0m[[0mdebug[0m] [0m	parser = ivy parser[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for play#templates-compiler_2.9.2;2.1.0: tried /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#templates-compiler_2.9.2;2.1.0!ivy.xml(ivy.original)[0m
+[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
 [0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m	default-cache: parsed downloaded md file for play#templates-compiler_2.9.2;2.1.0; parsed=play#templates-compiler_2.9.2;2.1.0[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#templates-compiler_2.9.2;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: play#templates-compiler_2.9.2;2.1.0[0m
+[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for play#templates-compiler_2.9.2;2.1.0 (resolved by local): /Users/pjohnson/play-2.1.0/framework/../repository/cache/play/templates-compiler_2.9.2/ivy-2.1.0.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: play#templates-compiler_2.9.2;2.1.0[0m
 [0m[[0mdebug[0m] [0m	checking play#templates-compiler_2.9.2;2.1.0 from local against [none][0m
 [0m[[0mdebug[0m] [0m	module revision kept as first found: play#templates-compiler_2.9.2;2.1.0 from local[0m
 [0m[[0mdebug[0m] [0m	found play#templates-compiler_2.9.2;2.1.0 in local[0m
@@ -1762,6 +1677,7 @@
 [0m[[0mdebug[0m] [0mtypesafe-ivy-releases: no latest strategy defined: using default[0m
 [0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no resource found for org.avaje.ebeanorm#avaje-ebeanorm-agent;[3.1,4): pattern=http://repo.typesafe.com/typesafe/ivy-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext][0m
 [0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm-agent;[3.1,4)[0m
+[0m[[0mdebug[0m] [0msbt-plugin-releases: no namespace defined: using system[0m
 [0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.avaje.ebeanorm#avaje-ebeanorm-agent;[3.1,4)[0m
 [0m[[0mdebug[0m] [0m		tried http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/[revision]/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	listing all in http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/[revision]/ivys/ivy.xml[0m
@@ -1772,6 +1688,7 @@
 [0m[[0mdebug[0m] [0m  java.io.IOException The HTTP response code for http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/ did not indicate a success. See log for more detail.[0m
 [0m[[0mdebug[0m] [0m	sbt-plugin-releases: unable to list resources for org.avaje.ebeanorm#avaje-ebeanorm-agent;[3.1,4): pattern=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext][0m
 [0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm-agent;[3.1,4)[0m
+[0m[[0mdebug[0m] [0mlocal: no namespace defined: using system[0m
 [0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.avaje.ebeanorm#avaje-ebeanorm-agent;[3.1,4)[0m
 [0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/org.avaje.ebeanorm/avaje-ebeanorm-agent/[revision]/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	listing all in /Users/pjohnson/play-2.1.0/repository/local/org.avaje.ebeanorm/avaje-ebeanorm-agent/[revision]/ivys/ivy.xml[0m
@@ -2238,12 +2155,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbtidea#sbt-idea;1.1.1->commons-io#commons-io;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of commons-io#commons-io;2.0.1 of rootConf=compile[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=runtime[0m
 [0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-plugin;2.1.0 of rootConf=runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play#sbt-plugin;2.1.0->play#sbt-link;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-link;2.1.0 of rootConf=runtime[0m
@@ -3645,15 +3562,15 @@
 [0m[[0mdebug[0m] [0mloadData of commons-io#commons-io;2.0.1 of rootConf=runtime[0m
 [0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test[0m
 [0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test[0m
 [0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-plugin;2.1.0 of rootConf=test[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play#sbt-plugin;2.1.0->play#sbt-link;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-link;2.1.0 of rootConf=test[0m
@@ -5056,9 +4973,9 @@
 [0m[[0mdebug[0m] [0mloadData of commons-io#commons-io;2.0.1 of rootConf=test[0m
 [0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [provided][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=provided[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-sbt#sbt;0.12.2 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=provided[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-sbt#sbt;0.12.2 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-sbt#sbt;0.12.2 of rootConf=provided[0m
 [0m[[0mdebug[0m] [0m	using sbt-chain to resolve org.scala-sbt#sbt;0.12.2[0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#sbt;0.12.2 ...[0m
@@ -6357,28 +6274,28 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.12.2->org.scala-lang#scala-library;2.9.2 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=provided[0m
 [0m[[0mdebug[0m] [0mprovided is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=provided[0m
 [0m[[0mdebug[0m] [0mprovided is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->runtime][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=provided[0m
 [0m[[0mdebug[0m] [0mprovided is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->compile][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=provided[0m
 [0m[[0mdebug[0m] [0mprovided is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->master][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=provided[0m
 [0m[[0mdebug[0m] [0mprovided is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=optional[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=optional[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [compile-internal][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=compile-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [compile-internal][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=compile-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-plugin;2.1.0 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play#sbt-plugin;2.1.0->play#sbt-link;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-link;2.1.0 of rootConf=compile-internal[0m
@@ -7781,13 +7698,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbtidea#sbt-idea;1.1.1->commons-io#commons-io;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of commons-io#commons-io;2.0.1 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=compile-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [provided][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=compile-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-sbt#sbt;0.12.2 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-sbt#sbt;0.12.2 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-sbt#sbt;0.12.2 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.12.2->org.scala-sbt#main;0.12.2 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-sbt#main;0.12.2 of rootConf=compile-internal[0m
@@ -8629,28 +8546,28 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.12.2->org.scala-lang#scala-library;2.9.2 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->runtime][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->compile][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->master][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [runtime-internal][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=runtime-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [runtime-internal][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=runtime-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=runtime-internal[0m
 [0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=runtime-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=runtime-internal[0m
 [0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-plugin;2.1.0 of rootConf=runtime-internal[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play#sbt-plugin;2.1.0->play#sbt-link;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-link;2.1.0 of rootConf=runtime-internal[0m
@@ -10053,22 +9970,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbtidea#sbt-idea;1.1.1->commons-io#commons-io;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of commons-io#commons-io;2.0.1 of rootConf=runtime-internal[0m
 [0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=runtime-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=runtime-internal[0m
 [0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [test-internal][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [test-internal][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->play#sbt-plugin;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-plugin;2.1.0 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play#sbt-plugin;2.1.0->play#sbt-link;2.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of play#sbt-link;2.1.0 of rootConf=test-internal[0m
@@ -11473,13 +11390,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbtidea#sbt-idea;1.1.1->commons-io#commons-io;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of commons-io#commons-io;2.0.1 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [provided][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=test-internal[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-sbt#sbt;0.12.2 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-sbt#sbt;0.12.2 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-sbt#sbt;0.12.2 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.12.2->org.scala-sbt#main;0.12.2 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-sbt#main;0.12.2 of rootConf=test-internal[0m
@@ -12309,30 +12226,30 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.12.2->org.scala-lang#scala-library;2.9.2 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->runtime][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->compile][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#default-faf2ad;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#default-c8ee57;0.1-SNAPSHOT->org.scala-lang#scala-library;2.9.2 [provided->master][0m
 [0m[[0mdebug[0m] [0mloadData of org.scala-lang#scala-library;2.9.2 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [plugin][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=plugin[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [plugin][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=plugin[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [sources][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=sources[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [sources][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=sources[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docs'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [docs][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=docs[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [docs][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=docs[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-faf2ad;0.1-SNAPSHOT [pom][0m
-[0m[[0mdebug[0m] [0mloadData of default#default-faf2ad;0.1-SNAPSHOT of rootConf=pom[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#default-c8ee57;0.1-SNAPSHOT [pom][0m
+[0m[[0mdebug[0m] [0mloadData of default#default-c8ee57;0.1-SNAPSHOT of rootConf=pom[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 101[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-sbt#sbt;0.12.2 / Number of dependencies = 6[0m
@@ -12831,29 +12748,12 @@
 [0m[[0mdebug[0m] [0morg.scala-lang#scala-compiler;2.9.2 in test-internal: excluding org.scala-lang#scala-compiler;2.9.2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0morg.scala-lang#scala-compiler;2.9.2 in provided: excluding org.scala-lang#scala-compiler;2.9.2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0morg.scala-lang#scala-compiler;2.9.2 in compile-internal: excluding org.scala-lang#scala-compiler;2.9.2!scala-compiler.jar[0m
-[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/pjohnson/beer/project/target/resolution-cache/default/default-faf2ad/scala_2.9.2/sbt_0.12/0.1-SNAPSHOT/resolved.xml.xml[0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/default/default-c8ee57/scala_2.9.2/sbt_0.12/0.1-SNAPSHOT/resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/jars/sbt-plugin.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/jars/sbt-plugin.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/jars/sbt-plugin.jar ...[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/jars/sbt-plugin.jar[0m
-[0m[[0mdebug[0m] [0m		to /Users/pjohnson/play-2.1.0/framework/../repository/cache/scala_2.9.2/sbt_0.12/play/sbt-plugin/jars/sbt-plugin-2.1.0.jar.part[0m
-[0m[[0mdebug[0m] [0msha1 file found for http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/jars/sbt-plugin.jar: checking...[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/jars/sbt-plugin.jar.sha1[0m
-[0m[[0mdebug[0m] [0m		to /var/folders/f5/04xy76_x16q08xftx4_j2f800000gn/T/ivytmp8304760498010426311sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.2/sbt_0.12/2.1.0/jars/sbt-plugin.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] play#sbt-plugin;2.1.0!sbt-plugin.jar (11900ms)[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/sbt-link/2.1.0/jars/sbt-link.jar[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/sbt-link/2.1.0/jars/sbt-link.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#sbt-plugin;2.1.0!sbt-plugin.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#sbt-link;2.1.0!sbt-link.jar[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/play-exceptions/2.1.0/jars/play-exceptions.jar[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/play-exceptions/2.1.0/jars/play-exceptions.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#play-exceptions;2.1.0!play-exceptions.jar[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/routes-compiler_2.9.2/2.1.0/jars/routes-compiler_2.9.2.jar[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/routes-compiler_2.9.2/2.1.0/jars/routes-compiler_2.9.2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#routes-compiler_2.9.2;2.1.0!routes-compiler_2.9.2.jar[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/pjohnson/play-2.1.0/repository/local/play/templates-compiler_2.9.2/2.1.0/jars/templates-compiler_2.9.2.jar[0m
-[0m[[0mdebug[0m] [0m		tried /Users/pjohnson/play-2.1.0/repository/local/play/templates-compiler_2.9.2/2.1.0/jars/templates-compiler_2.9.2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#templates-compiler_2.9.2;2.1.0!templates-compiler_2.9.2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] play#console_2.9.2;2.1.0!console_2.9.2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.0.0!config.jar(bundle)[0m
@@ -12967,7 +12867,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#cache;0.12.2!cache.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-agent;0.12.2!test-agent.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-tools.testing#test-interface;0.5!test-interface.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10977ms :: artifacts dl 12107ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 14641ms :: artifacts dl 244ms[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 61[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-link;2.1.0 / Number of dependencies = 1[0m
@@ -13208,7 +13108,7 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scalaz#scalaz-core_2.9.2;6.0.4[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.typesafe.sbtidea#sbt-idea;1.1.1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : commons-io#commons-io;2.0.1[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT compile produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/compile-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT compile produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/compile-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 61[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-link;2.1.0 / Number of dependencies = 1[0m
@@ -13449,7 +13349,7 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scalaz#scalaz-core_2.9.2;6.0.4[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.typesafe.sbtidea#sbt-idea;1.1.1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : commons-io#commons-io;2.0.1[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT runtime produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/runtime-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT runtime produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/runtime-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 61[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-link;2.1.0 / Number of dependencies = 1[0m
@@ -13690,7 +13590,7 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scalaz#scalaz-core_2.9.2;6.0.4[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.typesafe.sbtidea#sbt-idea;1.1.1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : commons-io#commons-io;2.0.1[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT test produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/test-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT test produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/test-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 41[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-sbt#sbt;0.12.2 / Number of dependencies = 6[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-sbt#main;0.12.2 / Number of dependencies = 12[0m
@@ -13926,9 +13826,9 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#compiler-interface;0.12.2[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#precompiled-2_8_2;0.12.2[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#precompiled-2_10_0;0.12.2[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT provided produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/provided-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT provided produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/provided-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT optional produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/optional-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT optional produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/optional-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 101[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-sbt#sbt;0.12.2 / Number of dependencies = 6[0m
@@ -14415,7 +14315,7 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#compiler-interface;0.12.2[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#precompiled-2_8_2;0.12.2[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#precompiled-2_10_0;0.12.2[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT compile-internal produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/compile-internal-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT compile-internal produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/compile-internal-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 61[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-link;2.1.0 / Number of dependencies = 1[0m
@@ -14656,7 +14556,7 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scalaz#scalaz-core_2.9.2;6.0.4[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.typesafe.sbtidea#sbt-idea;1.1.1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : commons-io#commons-io;2.0.1[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT runtime-internal produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/runtime-internal-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT runtime-internal produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/runtime-internal-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 101[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-sbt#sbt;0.12.2 / Number of dependencies = 6[0m
@@ -15143,14 +15043,14 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#compiler-interface;0.12.2[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#precompiled-2_8_2;0.12.2[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-sbt#precompiled-2_10_0;0.12.2[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT test-internal produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/test-internal-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT test-internal produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/test-internal-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT plugin produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/plugin-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT plugin produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/plugin-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT sources produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/sources-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT sources produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/sources-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT docs produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/docs-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT docs produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/docs-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
-[0m[[0mdebug[0m] [0m	report for default#default-faf2ad;0.1-SNAPSHOT pom produced in /Users/pjohnson/beer/project/target/resolution-cache/reports/default-default-faf2ad/pom-resolved.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (10977ms resolve - 12107ms download)[0m
+[0m[[0mdebug[0m] [0m	report for default#default-c8ee57;0.1-SNAPSHOT pom produced in /Users/pjohnson/beer-guide/project/target/resolution-cache/reports/default-default-c8ee57/pom-resolved.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (14641ms resolve - 244ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
