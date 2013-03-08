@@ -12,16 +12,14 @@ public class Application extends Controller {
     }
 
     public static Result fullOutput(String style) {
-        String response = "";
-        if (style.equals("porter")) {
-            response = "{style: \"porter\"}";
-        }
-        else if (style.equals("stout")) {
-            response = "{style: \"stout\"}";
-        }
-        else {
-            response = "{style: \"bud-lite\"}";
-        }
-        return ok(response);
+        JsonLibrary library = new JsonLibrary();
+
+        return ok(library.getValue(style));
     }
+
+    public static Result keys() {
+        JsonLibrary library = new JsonLibrary();
+        return ok(library.gimmeTheKeys());
+    }
+
 }
