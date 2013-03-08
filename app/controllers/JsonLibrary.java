@@ -24,11 +24,12 @@ public class JsonLibrary {
         addKeyValuePair("porter", "{style: \"porter\"}");
         addKeyValuePair("stout", "{style: \"stout\"}");
         addKeyValuePair("kolsh", "{style: \"kolsh\"}");
-        addKeyValuePair("eipa", "{style: \"eipa\"}");
-        addKeyValuePair("aipa", "{style: \"aipa\"}");
-        addKeyValuePair("epaleale", "{style: \"epaleale\"}");
-        addKeyValuePair("apaleale", "{style: \"apaleale\"}");
-        addKeyValuePair("ebitter", "{style: \"ebitter\"}");
+        addKeyValuePair("eipa", "{style: \"english ipa\"}");
+        addKeyValuePair("aipa", "{style: \"american ipa\"}");
+        addKeyValuePair("epaleale", "{style: \"english pale ale\"}");
+        addKeyValuePair("apaleale", "{style: \"american pale ale\"}");
+        addKeyValuePair("ebitter", "{style: \"english bitter\"}");
+        addKeyValuePair("esb", "{style: \"extra special bitter\"}");
 
         addKeyValuePair("default", "{style: \"bud-lite\"}");
     }
