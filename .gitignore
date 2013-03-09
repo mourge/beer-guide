@@ -1,9 +1,11 @@
 .idea/
 *.iml
 *.iws
+*.ipr
 target/
 project/target/*
 log/*
 logs/*
 .settings/*
+pom.xml
 
