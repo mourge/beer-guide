@@ -54,37 +54,26 @@ public class JsonLibrary {
 
     }
 
-    public void createStyleEntry() {
+    public JSONObject createStyleEntry(String style, String glass) {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("Style", "style");
 
-        JSONObject colorRange = new JSONObject();
-        colorRange.put("Lower", "lower");
-        colorRange.put("Upper", "upper");
+        jsonObject.put("Style", style);
+        jsonObject.put("Glass", glass);
 
-        jsonObject.put("Color-Range", colorRange);
+        jsonObject.put("Color-Range", getRangeJsonObject("lower", "upper"));
+        jsonObject.put("Fermentation Temperatures", getRangeJsonObject("lower", "upper"));
+        jsonObject.put("Serving Temperatures", getRangeJsonObject("lower", "upper"));
+        jsonObject.put("Original Gravity", getRangeJsonObject("lower", "upper"));
+        jsonObject.put("Bitterness", getRangeJsonObject("lower", "upper"));
 
-        JSONObject fermentationTemperatureRange = new JSONObject();
-        fermentationTemperatureRange.put("Lower", "lower");
-        fermentationTemperatureRange.put("Upper", "upper");
-        jsonObject.put("Fermentation Temperatures", fermentationTemperatureRange);
-
-        JSONObject servingTemperatureRange = new JSONObject();
-        servingTemperatureRange.put("Lower", "lower");
-        servingTemperatureRange.put("Upper", "upper");
-        jsonObject.put("Serving Temperatures", servingTemperatureRange);
-
-        jsonObject.put("Glass", "pint");
-
-        JSONObject originalGravity = new JSONObject();
-        originalGravity.put("Lower", "lower");
-        originalGravity.put("Upper", "upper");
-        jsonObject.put("Original Gravity", originalGravity);
-
-        JSONObject ibu = new JSONObject();
-        ibu.put("Lower", "lower");
-        ibu.put("Upper", "upper");
-        jsonObject.put("Bitterness", ibu);
-
+        return jsonObject;
     }
+
+    private JSONObject getRangeJsonObject(String lower, String upper) {
+        JSONObject range = new JSONObject();
+        range.put("Lower", lower);
+        range.put("Upper", upper);
+        return range;
+    }
+
 }
