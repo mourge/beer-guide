@@ -15,7 +15,7 @@ import org.json.simple.JSONObject;
 
 
 public class JsonLibrary {
-    private static HashMap<String, String> internalMap = null;
+    private static HashMap<String, JSONObject> internalMap = null;
 
     public JsonLibrary() {
         internalMap = new HashMap();
@@ -23,35 +23,52 @@ public class JsonLibrary {
     }
 
     private void primeData() {
-        addKeyValuePair("porter", "{style: \"porter\"}");
-        addKeyValuePair("stout", "{style: \"stout\"}");
-        addKeyValuePair("kolsh", "{style: \"kolsh\"}");
-        addKeyValuePair("eipa", "{style: \"english ipa\"}");
-        addKeyValuePair("aipa", "{style: \"american ipa\"}");
-        addKeyValuePair("epaleale", "{style: \"english pale ale\"}");
-        addKeyValuePair("apaleale", "{style: \"american pale ale\"}");
-        addKeyValuePair("ebitter", "{style: \"english bitter\"}");
-        addKeyValuePair("esb", "{style: \"extra special bitter\"}");
+        addKeyValuePair("porter", createStyleEntry("porter", "pint"));
+        addKeyValuePair("stout", createStyleEntry("stout", "pint"));
+        addKeyValuePair("kolsh", createStyleEntry("kolsh", "pint"));
+        addKeyValuePair("eipa", createStyleEntry("english ipa", "pint"));
+        addKeyValuePair("aipa", createStyleEntry("american ipa", "pint"));
+        addKeyValuePair("epaleale", createStyleEntry("english pale ale", "pint"));
+        addKeyValuePair("apaleale", createStyleEntry("american pale ale", "pint"));
+        addKeyValuePair("ebitter", createStyleEntry("english bitter", "pint"));
+        addKeyValuePair("esb", createStyleEntry("extra special bitter", "pint"));
 
-        addKeyValuePair("default", "{style: \"bud-lite\"}");
+        addKeyValuePair("default", createStyleEntry("bud-lite", "pint"));
     }
 
-    public void addKeyValuePair(String key, String value) {
+    public void addKeyValuePair(String key, JSONObject value) {
         internalMap.put(key, value);
     }
 
     public String getValue(String key) {
-        String returnValue = internalMap.get(key);
+        JSONObject returnValue = internalMap.get(key);
         if (returnValue != null) {
-            return returnValue;
+            return returnValue.toJSONString();
         }
-        return internalMap.get("default");
+        return internalMap.get("default").toJSONString();
 
     }
 
     public String gimmeTheKeys() {
         return internalMap.keySet().toString();
 
+    }
+
+    public JSONObject createStyleEntry(String style, String glass, JSONObject colorRange,
+                JSONObject fermentationTemperature, JSONObject serveTemperature, JSONObject originalGrav,
+                JSONObject ibu) {
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("Style", style);
+        jsonObject.put("Glass", glass);
+
+        jsonObject.put("Color-Range", colorRange);
+        jsonObject.put("Fermentation Temperatures", fermentationTemperature);
+        jsonObject.put("Serving Temperatures", serveTemperature);
+        jsonObject.put("Original Gravity", originalGrav);
+        jsonObject.put("Bitterness", ibu);
+
+        return jsonObject;
     }
 
     public JSONObject createStyleEntry(String style, String glass) {
@@ -76,4 +93,14 @@ public class JsonLibrary {
         return range;
     }
 
+    public String fermenterView(String key) {
+        JSONObject entry = internalMap.get(key);
+        entry.remove("Glass");
+        entry.remove("Color-Range");
+        entry.remove("Serving Temperatures");
+        entry.remove("Original Gravity");
+        entry.remove("Bitterness");
+
+        return entry.toJSONString();
+    }
 }

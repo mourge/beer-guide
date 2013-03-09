@@ -5,6 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index()
 GET     /style/:style               controllers.Application.fullOutput(style: String)
+GET     /style/:style/fermenter     controllers.Application.fermenterView(style: String)
 GET     /styles                     controllers.Application.keys()
 
 # Map static resources from the /public folder to the /assets URL path

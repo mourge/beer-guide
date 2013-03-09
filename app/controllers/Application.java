@@ -22,4 +22,8 @@ public class Application extends Controller {
         return ok(library.gimmeTheKeys());
     }
 
+    public static Result fermenterView(String key) {
+        JsonLibrary library = new JsonLibrary();
+        return ok(library.fermenterView(key));
+    }
 }
