@@ -105,6 +105,25 @@ public class JsonLibrary {
         return range;
     }
 
+    public void adjustUpperRange(String style, String key, String value) {
+        JSONObject jsonObject = adjustRangeValue(style, key, value, "Upper");
+        redisConnection.set(style, jsonObject.toJSONString());
+    }
+
+    public void adjustLowerRange(String style, String key, String value) {
+        JSONObject jsonObject = adjustRangeValue(style, key, value, "Lower");
+        redisConnection.set(style, jsonObject.toJSONString());
+    }
+
+    private JSONObject adjustRangeValue(String style, String key, String value, String upperLower) {
+        JSONObject jsonObject = fetchFromRedis(style);
+        JSONObject rangeObject = (JSONObject) jsonObject.get(key);
+        rangeObject.put(upperLower, value);
+
+        jsonObject.put(key, rangeObject);
+        return jsonObject;
+    }
+
     public String fermenterView(String key) {
         JSONObject entry = fetchFromRedis(key);
         entry.remove("Glass");

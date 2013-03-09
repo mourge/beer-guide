@@ -9,6 +9,7 @@ GET     /style/:style/fermenter     controllers.Application.fermenterView(style:
 GET     /style/:style/keg           controllers.Application.kegView(style: String)
 
 GET     /styles                     controllers.Application.keys()
+
 PUT     /prime                      controllers.Application.prime()
 
 # Map static resources from the /public folder to the /assets URL path
