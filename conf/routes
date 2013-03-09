@@ -12,5 +12,8 @@ GET     /styles                     controllers.Application.keys()
 
 PUT     /prime                      controllers.Application.prime()
 
+PUT     /raise/:style/:key/:newvalue    controllers.Application.raise(style: String, key: String, newvalue: String)
+PUT     /lower/:style/:key/:newvalue    controllers.Application.lower(style: String, key: String, newvalue: String)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

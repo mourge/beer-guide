@@ -117,6 +117,8 @@ public class JsonLibrary {
 
     private JSONObject adjustRangeValue(String style, String key, String value, String upperLower) {
         JSONObject jsonObject = fetchFromRedis(style);
+        System.out.println(String.format("   Fetching value from Redis to adjust %s %s %s %s ", style, key, value, upperLower));
+        System.out.println(jsonObject);
         JSONObject rangeObject = (JSONObject) jsonObject.get(key);
         rangeObject.put(upperLower, value);
 
