@@ -3,6 +3,9 @@ package controllers;
 
 import java.util.HashMap;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import redis.clients.jedis.Jedis;
 
 
 /**
@@ -16,13 +19,14 @@ import org.json.simple.JSONObject;
 
 public class JsonLibrary {
     private static HashMap<String, JSONObject> internalMap = null;
+    private static Jedis redisConnection;
 
     public JsonLibrary() {
-        internalMap = new HashMap();
-        primeData();
+        redisConnection = new Jedis("localhost");
+        redisConnection.connect();
     }
 
-    private void primeData() {
+    public void primeData() {
         addKeyValuePair("porter", createStyleEntry("porter", "pint"));
         addKeyValuePair("stout", createStyleEntry("stout", "pint"));
         addKeyValuePair("kolsh", createStyleEntry("kolsh", "pint"));
@@ -37,20 +41,26 @@ public class JsonLibrary {
     }
 
     public void addKeyValuePair(String key, JSONObject value) {
-        internalMap.put(key, value);
+        redisConnection.set(key, value.toJSONString());
     }
 
     public String getValue(String key) {
-        JSONObject returnValue = internalMap.get(key);
-        if (returnValue != null) {
-            return returnValue.toJSONString();
-        }
-        return internalMap.get("default").toJSONString();
+        return fetchFromRedis(key).toJSONString();
+    }
 
+    private JSONObject fetchFromRedis(String key) {
+        JSONObject redisReturn;
+        JSONParser parser = new JSONParser();
+        try {
+            redisReturn = (JSONObject) parser.parse(redisConnection.get(key));
+        } catch (ParseException e) {
+            redisReturn = createStyleEntry("Bud Lite", "Frosted Pint Glass");
+        }
+        return redisReturn;
     }
 
     public String gimmeTheKeys() {
-        return internalMap.keySet().toString();
+        return redisConnection.keys("*").toString();
 
     }
 
@@ -96,7 +106,7 @@ public class JsonLibrary {
     }
 
     public String fermenterView(String key) {
-        JSONObject entry = internalMap.get(key);
+        JSONObject entry = fetchFromRedis(key);
         entry.remove("Glass");
         entry.remove("Color-Range");
         entry.remove("Serving Temperatures");
@@ -108,7 +118,7 @@ public class JsonLibrary {
     }
 
     public String kegView(String key) {
-        JSONObject entry = internalMap.get(key);
+        JSONObject entry = fetchFromRedis(key);
 
         entry.remove("Glass");
         entry.remove("Fermentation Temperatures");

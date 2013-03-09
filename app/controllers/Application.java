@@ -31,4 +31,10 @@ public class Application extends Controller {
         JsonLibrary library = new JsonLibrary();
         return ok(library.kegView(key));
     }
+
+    public static Result prime() {
+        JsonLibrary library = new JsonLibrary();
+        library.primeData();
+        return ok("Data entered");
+    }
 }
