@@ -26,4 +26,9 @@ public class Application extends Controller {
         JsonLibrary library = new JsonLibrary();
         return ok(library.fermenterView(key));
     }
+
+    public static Result kegView(String key) {
+        JsonLibrary library = new JsonLibrary();
+        return ok(library.kegView(key));
+    }
 }

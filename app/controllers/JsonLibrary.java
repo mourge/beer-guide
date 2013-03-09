@@ -56,7 +56,7 @@ public class JsonLibrary {
 
     public JSONObject createStyleEntry(String style, String glass, JSONObject colorRange,
                 JSONObject fermentationTemperature, JSONObject serveTemperature, JSONObject originalGrav,
-                JSONObject ibu) {
+                JSONObject ibu, String servePressure) {
         JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("Style", style);
@@ -65,6 +65,7 @@ public class JsonLibrary {
         jsonObject.put("Color-Range", colorRange);
         jsonObject.put("Fermentation Temperatures", fermentationTemperature);
         jsonObject.put("Serving Temperatures", serveTemperature);
+        jsonObject.put("Serving Pressure", servePressure);
         jsonObject.put("Original Gravity", originalGrav);
         jsonObject.put("Bitterness", ibu);
 
@@ -76,6 +77,7 @@ public class JsonLibrary {
 
         jsonObject.put("Style", style);
         jsonObject.put("Glass", glass);
+        jsonObject.put("Serving Pressure", "10psi");
 
         jsonObject.put("Color-Range", getRangeJsonObject("lower", "upper"));
         jsonObject.put("Fermentation Temperatures", getRangeJsonObject("lower", "upper"));
@@ -98,6 +100,19 @@ public class JsonLibrary {
         entry.remove("Glass");
         entry.remove("Color-Range");
         entry.remove("Serving Temperatures");
+        entry.remove("Serving Pressure");
+        entry.remove("Original Gravity");
+        entry.remove("Bitterness");
+
+        return entry.toJSONString();
+    }
+
+    public String kegView(String key) {
+        JSONObject entry = internalMap.get(key);
+
+        entry.remove("Glass");
+        entry.remove("Fermentation Temperatures");
+        entry.remove("Color-Range");
         entry.remove("Original Gravity");
         entry.remove("Bitterness");
 
