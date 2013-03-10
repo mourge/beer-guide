@@ -39,7 +39,6 @@ public class Application extends Controller {
             case "fermtemp" : return "Fermentation Temperatures";
             case "color" : return "Color-Range";
             case "servtemp" : return "Serving Temperatures";
-            case "servepressure" : return "Serving Pressure";
             case "og" : return "Original Gravity";
             case "ibu" : return "Bitterness";
             default: return INVALID_TAG;
