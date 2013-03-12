@@ -33,7 +33,7 @@ public class BeerStyle {
     private final String COLORLKEY = "Color-Range";
     private final String FERMTEMPKEY ="Fermentation Temperatures";
     private final String SERVTEMPKEY ="Serving Temperatures";
-    private final String SERVPRESKEY="Serving Pressure":
+    private final String SERVPRESKEY="Serving Pressure";
     private final String OGKEY ="Original Gravity";
     private final String FGKEY ="Final Gravity";
     private final String IBUKEY ="Bitterness";
