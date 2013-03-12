@@ -12,10 +12,13 @@ public class BeerStyleStructure {
     public static final String GLASSKEY = "Glass";
 
     public static final String COLORLKEY = "Color-Range";
-    public static final String FERMTEMPKEY ="Fermentation Temperatures";
-    public static final String SERVTEMPKEY ="Serving Temperatures";
-    public static final String SERVPRESKEY="Serving Pressure";
-    public static final String OGKEY ="Original Gravity";
-    public static final String FGKEY ="Final Gravity";
-    public static final String IBUKEY ="Bitterness";
+    public static final String FERMTEMPKEY = "Fermentation Temperatures";
+    public static final String SERVTEMPKEY = "Serving Temperatures";
+    public static final String SERVPRESKEY= "Serving Pressure";
+    public static final String OGKEY = "Original Gravity";
+    public static final String FGKEY = "Final Gravity";
+    public static final String IBUKEY = "Bitterness";
+
+    public static final String UPPER = "Upper";
+    public static final String LOWER = "Lower";
 }

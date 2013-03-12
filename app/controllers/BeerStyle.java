@@ -111,16 +111,21 @@ public class BeerStyle {
     }
 
     public BeerStyle(JSONObject inputString) {
-//        for
+        JSONObject range;
         style = (String) inputString.get(BeerStyleStructure.STYLEKEY);
 
         servingPressure = new Integer((Integer) inputString.get(BeerStyleStructure.SERVPRESKEY));
-        glass = null;
+        glass = (String) inputString.get(BeerStyleStructure.GLASSKEY);
 
-//        setRange(fermtemp, inputString.get
-//         color = null;
-//         og = null;
-//         fg = null;
-//         ibu = null;
+        range = (JSONObject) inputString.get(BeerStyleStructure.COLORLKEY);
+        setRange(color, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        range = (JSONObject) inputString.get(BeerStyleStructure.FERMTEMPKEY);
+        setRange(fermtemp, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        range = (JSONObject) inputString.get(BeerStyleStructure.OGKEY);
+        setRange(og, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        range = (JSONObject) inputString.get(BeerStyleStructure.FGKEY);
+        setRange(fg, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        range = (JSONObject) inputString.get(BeerStyleStructure.IBUKEY);
+        setRange(ibu, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
     }
 }
