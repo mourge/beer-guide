@@ -49,10 +49,15 @@ public class JsonLibrary {
     }
 
     private JSONObject fetchFromRedis(String key) {
-        JSONObject redisReturn;
+        JSONObject redisReturn = null;
         JSONParser parser = new JSONParser();
         try {
-            redisReturn = (JSONObject) parser.parse(redisConnection.get(key));
+            if (redisConnection.exists(key)) {
+                redisReturn = (JSONObject) parser.parse(redisConnection.get(key));
+            }
+            else {
+                redisReturn = createStyleEntry("Bud Lite", "Frosted Pint Glass");
+            }
         } catch (ParseException e) {
             redisReturn = createStyleEntry("Bud Lite", "Frosted Pint Glass");
         }
