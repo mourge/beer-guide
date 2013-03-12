@@ -40,8 +40,8 @@ public class JsonLibrary {
         addKeyValuePair("default", createStyleEntry("bud-lite", "pint"));
     }
 
-    public void addKeyValuePair(String key, JSONObject value) {
-        redisConnection.set(key, value.toJSONString());
+    public void addKeyValuePair(String key, BeerStyle value) {
+        redisConnection.set(key, value.fullOutput());
     }
 
     public String getValue(String key) {
@@ -56,10 +56,10 @@ public class JsonLibrary {
                 redisReturn = (JSONObject) parser.parse(redisConnection.get(key));
             }
             else {
-                redisReturn = createStyleEntry("Bud Lite", "Frosted Pint Glass");
+                redisReturn = DefaultBeerStyle.beer();
             }
         } catch (ParseException e) {
-            redisReturn = createStyleEntry("Bud Lite", "Frosted Pint Glass");
+            redisReturn = DefaultBeerStyle.beer();
         }
         return redisReturn;
     }
@@ -69,7 +69,7 @@ public class JsonLibrary {
 
     }
 
-    public JSONObject createStyleEntry(String style, String glass, JSONObject colorRange,
+    public BeerStyle createStyleEntry(String style, String glass, JSONObject colorRange,
                 JSONObject fermentationTemperature, JSONObject serveTemperature, JSONObject originalGrav,
                 JSONObject ibu, String servePressure) {
         JSONObject jsonObject = new JSONObject();
@@ -84,10 +84,10 @@ public class JsonLibrary {
         jsonObject.put("Original Gravity", originalGrav);
         jsonObject.put("Bitterness", ibu);
 
-        return jsonObject;
+        return new BeerStyle(jsonObject);
     }
 
-    public JSONObject createStyleEntry(String style, String glass) {
+    public BeerStyle createStyleEntry(String style, String glass) {
         JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("Style", style);
@@ -100,7 +100,7 @@ public class JsonLibrary {
         jsonObject.put("Original Gravity", getRangeJsonObject("lower", "upper"));
         jsonObject.put("Bitterness", getRangeJsonObject("lower", "upper"));
 
-        return jsonObject;
+        return new BeerStyle(jsonObject);
     }
 
     private JSONObject getRangeJsonObject(String lower, String upper) {

@@ -120,7 +120,7 @@ public class BeerStyle {
         return returnValue.toString();
     }
 
-    public String fullOutput(String key) {
+    public String fullOutput() {
         StringBuilder returnValue = new StringBuilder();
         returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style()));
         returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.GLASSKEY, glass()));
