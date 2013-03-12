@@ -47,19 +47,58 @@ public class BeerStyle {
         return String.format("%d psi", servingPressure);
     }
 
+    public String fgString() {
+        return getRangeString(fg);
+    }
+
+    public JSONObject fg() {
+        return getRange(fg);
+    }
+
+    public String colorString() {
+        return getRangeString(color);
+    }
+
+    public JSONObject color() {
+        return getRange(color);
+    }
+
+    public String ogString() {
+        return getRangeString(og);
+    }
+
+    public JSONObject og() {
+        return getRange(og);
+    }
+
+    public String fermtempString() {
+        return getRangeString(fermtemp);
+    }
+
+    public JSONObject fermtemp() {
+        return getRange(fermtemp);
+    }
     public String ibuString() {
-        return String.format("%s - %s", ibu.upperBound, ibu.lowerBound);
+        return getRangeString(ibu);
     }
 
     public JSONObject ibu() {
+        return getRange(ibu);
+    }
+
+    private JSONObject getRange(Range range) {
         JSONParser parser = new JSONParser();
         JSONObject returnObject = null;
         try {
-            returnObject = (JSONObject) parser.parse(String.format("{\"Upper\": %s, \"Lower\": %s}", ibu.upperBound, ibu.lowerBound));
+            returnObject = (JSONObject) parser.parse(String.format("{\"Upper\": %s, \"Lower\": %s}", range.upperBound, range.lowerBound));
         } catch (ParseException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
         return returnObject;
+    }
+
+    private String getRangeString(Range range) {
+        return String.format("%s - %s", range.upperBound, range.lowerBound);
     }
 
     public BeerStyle(JSONObject inputString) {
