@@ -4,6 +4,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.lang.reflect.Field;
+
 public class BeerStyle {
     private class Range {
         public String upperBound;
@@ -24,6 +26,14 @@ public class BeerStyle {
     private void setRange(Range range, String upperBound, String lowerBound) {
         range.upperBound = upperBound;
         range.lowerBound = lowerBound;
+    }
+
+    private String glass() {
+        return glass;
+    }
+
+    private String style() {
+        return style;
     }
 
     public String servingPressure() {
@@ -110,7 +120,28 @@ public class BeerStyle {
         return returnValue.toString();
     }
 
+    public String fullOutput(String key) {
+        StringBuilder returnValue = new StringBuilder();
+        returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style()));
+        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.GLASSKEY, glass()));
+
+        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.COLORLKEY, colorString()));
+        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.FERMTEMPKEY, fermtempString()));
+        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.SERVPRESKEY, servingPressure()));
+        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.SERVTEMPKEY, servtemperatureString()));
+        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.OGKEY, ogString()));
+        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.FGKEY, fgString()));
+        returnValue.append("}");
+
+        return returnValue.toString();
+    }
+
     public BeerStyle(JSONObject inputString) {
+        Field[] fields = BeerStyleStructure.class.getFields();
+        for (Field field : fields) {
+            if (!inputString.containsKey(field)) { return; }
+        }
+
         JSONObject range;
         style = (String) inputString.get(BeerStyleStructure.STYLEKEY);
 
