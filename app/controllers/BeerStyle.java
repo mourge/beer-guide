@@ -22,6 +22,7 @@ public class BeerStyle {
     private String glass;
 
     private Range fermtemp;
+    private Range servtemp;
     private Range color;
     private Range og;
     private Range fg;
@@ -78,6 +79,15 @@ public class BeerStyle {
     public JSONObject fermtemp() {
         return getRange(fermtemp);
     }
+
+    public String servtemperatureString() {
+        return getRangeString(servtemp);
+    }
+
+    public JSONObject servtemperature() {
+        return getRange(servtemp);
+    }
+
     public String ibuString() {
         return getRangeString(ibu);
     }
@@ -101,11 +111,28 @@ public class BeerStyle {
         return String.format("%s - %s", range.upperBound, range.lowerBound);
     }
 
+    public String fermenterView(String key) {
+        StringBuilder returnValue = new StringBuilder();
+        returnValue.append(String.format("{\"%s\":\"%s\",", STYLEKEY, style));
+        returnValue.append(String.format("\"%s\":\"%s\"", FERMTEMPKEY, fermtempString()));
+        returnValue.append("}");
+        return returnValue.toString();
+    }
+
+    public String kegView(String key) {
+        StringBuilder returnValue = new StringBuilder();
+        returnValue.append(String.format("{\"%s\":\"%s\",", STYLEKEY, style));
+        returnValue.append(String.format("\"%s\":\"%s\",", SERVPRESKEY, servingPressure()));
+        returnValue.append(String.format("\"%s\":\"%s\"", SERVTEMPKEY, servtemperature()));
+        returnValue.append("}");
+        return returnValue.toString();
+    }
+
     public BeerStyle(JSONObject inputString) {
         style = (String) inputString.get(STYLEKEY);
 
-        servingPressure =0 ;
-         glass = null;
+        servingPressure = 0 ;
+        glass = null;
 
 //        setRange(fermtemp, inputString.get
 //         color = null;
