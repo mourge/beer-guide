@@ -4,13 +4,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-/**
- * Created with IntelliJ IDEA.
- * User: pjohnson
- * Date: 3/9/13
- * Time: 12:10 PM
- * To change this template use File | Settings | File Templates.
- */
 public class BeerStyle {
     private class Range {
         public String upperBound;
@@ -27,17 +20,6 @@ public class BeerStyle {
     private Range og;
     private Range fg;
     private Range ibu;
-
-    private final String STYLEKEY = "Style";
-    private final String GLASSKEY = "Glass";
-
-    private final String COLORLKEY = "Color-Range";
-    private final String FERMTEMPKEY ="Fermentation Temperatures";
-    private final String SERVTEMPKEY ="Serving Temperatures";
-    private final String SERVPRESKEY="Serving Pressure";
-    private final String OGKEY ="Original Gravity";
-    private final String FGKEY ="Final Gravity";
-    private final String IBUKEY ="Bitterness";
     
     private void setRange(Range range, String upperBound, String lowerBound) {
         range.upperBound = upperBound;
@@ -113,25 +95,26 @@ public class BeerStyle {
 
     public String fermenterView(String key) {
         StringBuilder returnValue = new StringBuilder();
-        returnValue.append(String.format("{\"%s\":\"%s\",", STYLEKEY, style));
-        returnValue.append(String.format("\"%s\":\"%s\"", FERMTEMPKEY, fermtempString()));
+        returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style));
+        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.FERMTEMPKEY, fermtempString()));
         returnValue.append("}");
         return returnValue.toString();
     }
 
     public String kegView(String key) {
         StringBuilder returnValue = new StringBuilder();
-        returnValue.append(String.format("{\"%s\":\"%s\",", STYLEKEY, style));
-        returnValue.append(String.format("\"%s\":\"%s\",", SERVPRESKEY, servingPressure()));
-        returnValue.append(String.format("\"%s\":\"%s\"", SERVTEMPKEY, servtemperature()));
+        returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style));
+        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.SERVPRESKEY, servingPressure()));
+        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.SERVTEMPKEY, servtemperature()));
         returnValue.append("}");
         return returnValue.toString();
     }
 
     public BeerStyle(JSONObject inputString) {
-        style = (String) inputString.get(STYLEKEY);
+//        for
+        style = (String) inputString.get(BeerStyleStructure.STYLEKEY);
 
-        servingPressure = 0 ;
+        servingPressure = new Integer((Integer) inputString.get(BeerStyleStructure.SERVPRESKEY));
         glass = null;
 
 //        setRange(fermtemp, inputString.get
