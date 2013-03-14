@@ -21,18 +21,10 @@ public class JsonLibrary {
         redisConnection.connect();
     }
 
-    public void primeData() {
-        addKeyValuePair("porter", createStyleEntry("porter", "pint"));
-        addKeyValuePair("stout", createStyleEntry("stout", "pint"));
-        addKeyValuePair("kolsh", createStyleEntry("kolsh", "pint"));
-        addKeyValuePair("eipa", createStyleEntry("english ipa", "pint"));
-        addKeyValuePair("aipa", createStyleEntry("american ipa", "pint"));
-        addKeyValuePair("epaleale", createStyleEntry("english pale ale", "pint"));
-        addKeyValuePair("apaleale", createStyleEntry("american pale ale", "pint"));
-        addKeyValuePair("ebitter", createStyleEntry("english bitter", "pint"));
-        addKeyValuePair("esb", createStyleEntry("extra special bitter", "pint"));
-
-        addKeyValuePair("default", createStyleEntry("bud-lite", "pint"));
+    public void primeData(String [][] data) {
+        for (String[] entry : data) {
+            addKeyValuePair(entry[0], createStyleEntry(entry[1], entry[2]));
+        }
     }
 
     public void addKeyValuePair(String key, BeerStyle value) {

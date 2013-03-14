@@ -34,7 +34,18 @@ public class Application extends Controller {
     }
 
     public static Result prime() {
-        library.primeData();
+        String[][] data = new String[][] {
+            {"porter","porter","pint"},
+            {"stout","stout", "pint"},
+            {"kolsh", "kolsh", "pint"},
+            {"eipa","english ipa", "pint"},
+            {"aipa","american ipa", "pint"},
+            {"epaleale","english pale ale", "pint"},
+            {"apaleale","american pale ale", "pint"},
+            {"ebitter","english bitter", "pint"},
+            {"esb","extra special bitter", "pint"},
+            {"default","bud-lite", "pint"}};
+        library.primeData(data);
         return ok("Data entered");
     }
 
