@@ -3,6 +3,7 @@ package controllers;
 
 import java.util.HashMap;
 import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import redis.clients.jedis.Jedis;
@@ -18,7 +19,6 @@ import redis.clients.jedis.Jedis;
 
 
 public class JsonLibrary {
-    private static HashMap<String, JSONObject> internalMap = null;
     private static Jedis redisConnection;
 
     public JsonLibrary() {
@@ -48,57 +48,41 @@ public class JsonLibrary {
         return fetchFromRedis(key).toJSONString();
     }
 
-    private JSONObject fetchFromRedis(String key) {
+    public JSONObject fetchFromRedis(String key) {
         JSONObject redisReturn = null;
-        JSONParser parser = new JSONParser();
-        try {
             if (redisConnection.exists(key)) {
-                redisReturn = (JSONObject) parser.parse(redisConnection.get(key));
+                String redisValue = redisConnection.get(key);
+                Object obj = null;
+                try {
+                    obj = new JSONParser().parse((redisValue));
+                } catch (ParseException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+                redisReturn = (JSONObject) obj;;
             }
             else {
                 redisReturn = DefaultBeerStyle.beer();
             }
-        } catch (ParseException e) {
-            redisReturn = DefaultBeerStyle.beer();
-        }
         return redisReturn;
     }
 
     public String gimmeTheKeys() {
         return redisConnection.keys("*").toString();
-
-    }
-
-    public BeerStyle createStyleEntry(String style, String glass, JSONObject colorRange,
-                JSONObject fermentationTemperature, JSONObject serveTemperature, JSONObject originalGrav,
-                JSONObject ibu, String servePressure) {
-        JSONObject jsonObject = new JSONObject();
-
-        jsonObject.put("Style", style);
-        jsonObject.put("Glass", glass);
-
-        jsonObject.put("Color-Range", colorRange);
-        jsonObject.put("Fermentation Temperatures", fermentationTemperature);
-        jsonObject.put("Serving Temperatures", serveTemperature);
-        jsonObject.put("Serving Pressure", servePressure);
-        jsonObject.put("Original Gravity", originalGrav);
-        jsonObject.put("Bitterness", ibu);
-
-        return new BeerStyle(jsonObject);
     }
 
     public BeerStyle createStyleEntry(String style, String glass) {
         JSONObject jsonObject = new JSONObject();
 
-        jsonObject.put("Style", style);
-        jsonObject.put("Glass", glass);
-        jsonObject.put("Serving Pressure", "10psi");
+        jsonObject.put(BeerStyleStructure.STYLEKEY, style);
+        jsonObject.put(BeerStyleStructure.GLASSKEY, glass);
+        jsonObject.put(BeerStyleStructure.SERVPRESKEY, "10psi");
 
-        jsonObject.put("Color-Range", getRangeJsonObject("lower", "upper"));
-        jsonObject.put("Fermentation Temperatures", getRangeJsonObject("lower", "upper"));
-        jsonObject.put("Serving Temperatures", getRangeJsonObject("lower", "upper"));
-        jsonObject.put("Original Gravity", getRangeJsonObject("lower", "upper"));
-        jsonObject.put("Bitterness", getRangeJsonObject("lower", "upper"));
+        jsonObject.put(BeerStyleStructure.COLORLKEY, getRangeJsonObject("lower", "upper"));
+        jsonObject.put(BeerStyleStructure.FERMTEMPKEY, getRangeJsonObject("lower", "upper"));
+        jsonObject.put(BeerStyleStructure.SERVTEMPKEY, getRangeJsonObject("lower", "upper"));
+        jsonObject.put(BeerStyleStructure.OGKEY, getRangeJsonObject("lower", "upper"));
+        jsonObject.put(BeerStyleStructure.FGKEY, getRangeJsonObject("lower", "upper"));
+        jsonObject.put(BeerStyleStructure.IBUKEY, getRangeJsonObject("lower", "upper"));
 
         return new BeerStyle(jsonObject);
     }
@@ -122,36 +106,10 @@ public class JsonLibrary {
 
     private JSONObject adjustRangeValue(String style, String key, String value, String upperLower) {
         JSONObject jsonObject = fetchFromRedis(style);
-        System.out.println(String.format("   Fetching value from Redis to adjust %s %s %s %s ", style, key, value, upperLower));
-        System.out.println(jsonObject);
         JSONObject rangeObject = (JSONObject) jsonObject.get(key);
         rangeObject.put(upperLower, value);
 
         jsonObject.put(key, rangeObject);
         return jsonObject;
-    }
-
-    public String fermenterView(String key) {
-        JSONObject entry = fetchFromRedis(key);
-        entry.remove("Glass");
-        entry.remove("Color-Range");
-        entry.remove("Serving Temperatures");
-        entry.remove("Serving Pressure");
-        entry.remove("Original Gravity");
-        entry.remove("Bitterness");
-
-        return entry.toJSONString();
-    }
-
-    public String kegView(String key) {
-        JSONObject entry = fetchFromRedis(key);
-
-        entry.remove("Glass");
-        entry.remove("Fermentation Temperatures");
-        entry.remove("Color-Range");
-        entry.remove("Original Gravity");
-        entry.remove("Bitterness");
-
-        return entry.toJSONString();
     }
 }

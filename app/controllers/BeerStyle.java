@@ -1,10 +1,6 @@
 package controllers;
 
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.lang.reflect.Field;
 
 public class BeerStyle {
     private class Range {
@@ -12,7 +8,7 @@ public class BeerStyle {
         public String lowerBound;
     }
 
-    private int servingPressure;
+    private String servingPressure;
     private String style;
     private String glass;
 
@@ -23,9 +19,11 @@ public class BeerStyle {
     private Range fg;
     private Range ibu;
     
-    private void setRange(Range range, String upperBound, String lowerBound) {
+    private Range setRange(String upperBound, String lowerBound) {
+        Range range = new Range();
         range.upperBound = upperBound;
         range.lowerBound = lowerBound;
+        return range;
     }
 
     private String glass() {
@@ -72,12 +70,16 @@ public class BeerStyle {
         return getRange(fermtemp);
     }
 
+    public JSONObject servtemperature() {
+        return getRange(servtemp);
+    }
+
     public String servtemperatureString() {
         return getRangeString(servtemp);
     }
 
-    public JSONObject servtemperature() {
-        return getRange(servtemp);
+    public String servPressure() {
+        return servingPressure;
     }
 
     public String ibuString() {
@@ -89,21 +91,18 @@ public class BeerStyle {
     }
 
     private JSONObject getRange(Range range) {
-        JSONParser parser = new JSONParser();
-        JSONObject returnObject = null;
-        try {
-            returnObject = (JSONObject) parser.parse(String.format("{\"Upper\": %s, \"Lower\": %s}", range.upperBound, range.lowerBound));
-        } catch (ParseException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+        JSONObject returnObject = new JSONObject();
+        returnObject.put("Upper", range.upperBound);
+        returnObject.put("Lower", range.lowerBound);
         return returnObject;
     }
 
     private String getRangeString(Range range) {
+        System.out.println(range);
         return String.format("%s - %s", range.upperBound, range.lowerBound);
     }
 
-    public String fermenterView(String key) {
+    public String fermenterView() {
         StringBuilder returnValue = new StringBuilder();
         returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style));
         returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.FERMTEMPKEY, fermtempString()));
@@ -111,10 +110,10 @@ public class BeerStyle {
         return returnValue.toString();
     }
 
-    public String kegView(String key) {
+    public String kegView() {
         StringBuilder returnValue = new StringBuilder();
         returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style));
-        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.SERVPRESKEY, servingPressure()));
+        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.SERVPRESKEY, servingPressure));
         returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.SERVTEMPKEY, servtemperature()));
         returnValue.append("}");
         return returnValue.toString();
@@ -124,39 +123,34 @@ public class BeerStyle {
         StringBuilder returnValue = new StringBuilder();
         returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style()));
         returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.GLASSKEY, glass()));
-
-        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.COLORLKEY, colorString()));
-        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.FERMTEMPKEY, fermtempString()));
-        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.SERVPRESKEY, servingPressure()));
-        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.SERVTEMPKEY, servtemperatureString()));
-        returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.OGKEY, ogString()));
-        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.FGKEY, fgString()));
+        returnValue.append(String.format("\"%s\":%s,", BeerStyleStructure.COLORLKEY, color().toJSONString()));
+        returnValue.append(String.format("\"%s\":%s,", BeerStyleStructure.FERMTEMPKEY, fermtemp().toJSONString()));
+        returnValue.append(String.format("\"%s\":%s", BeerStyleStructure.SERVTEMPKEY, servtemperature().toJSONString()));
+        returnValue.append(String.format("\"%s\":%s,", BeerStyleStructure.OGKEY, og().toJSONString()));
+        returnValue.append(String.format("\"%s\":%s,", BeerStyleStructure.FGKEY, fg().toJSONString()));
+        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.SERVPRESKEY, servingPressure));
         returnValue.append("}");
+        System.out.println(returnValue.toString());
 
         return returnValue.toString();
     }
 
     public BeerStyle(JSONObject inputString) {
-        Field[] fields = BeerStyleStructure.class.getFields();
-        for (Field field : fields) {
-            if (!inputString.containsKey(field)) { return; }
-        }
-
         JSONObject range;
         style = (String) inputString.get(BeerStyleStructure.STYLEKEY);
-
-        servingPressure = new Integer((Integer) inputString.get(BeerStyleStructure.SERVPRESKEY));
+        servingPressure = (String) inputString.get(BeerStyleStructure.SERVPRESKEY);
         glass = (String) inputString.get(BeerStyleStructure.GLASSKEY);
-
+        range = (JSONObject) inputString.get(BeerStyleStructure.SERVTEMPKEY);
+        servtemp = setRange((String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
         range = (JSONObject) inputString.get(BeerStyleStructure.COLORLKEY);
-        setRange(color, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        color = setRange((String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
         range = (JSONObject) inputString.get(BeerStyleStructure.FERMTEMPKEY);
-        setRange(fermtemp, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        fermtemp = setRange((String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
         range = (JSONObject) inputString.get(BeerStyleStructure.OGKEY);
-        setRange(og, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        og = setRange((String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
         range = (JSONObject) inputString.get(BeerStyleStructure.FGKEY);
-        setRange(fg, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        fg = setRange((String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
         range = (JSONObject) inputString.get(BeerStyleStructure.IBUKEY);
-        setRange(ibu, (String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
+        ibu = setRange((String) range.get(BeerStyleStructure.UPPER),(String) range.get(BeerStyleStructure.LOWER));
     }
 }

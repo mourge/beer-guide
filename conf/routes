@@ -11,6 +11,8 @@ GET     /style/:style/keg           controllers.Application.kegView(style: Strin
 GET     /styles                     controllers.Application.keys()
 
 PUT     /prime                      controllers.Application.prime()
+GET     /prime                      controllers.Application.prime()
+
 
 PUT     /raise/:style/:key/:newvalue    controllers.Application.raise(style: String, key: String, newvalue: String)
 PUT     /lower/:style/:key/:newvalue    controllers.Application.lower(style: String, key: String, newvalue: String)

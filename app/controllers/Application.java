@@ -1,5 +1,7 @@
 package controllers;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import play.*;
 import play.mvc.*;
 
@@ -22,11 +24,16 @@ public class Application extends Controller {
     }
 
     public static Result fermenterView(String key) {
-        return ok(library.fermenterView(key));
+        BeerStyle style = new BeerStyle(library.fetchFromRedis(key));
+        return ok(style.fermenterView());
     }
 
     public static Result kegView(String key) {
-        return ok(library.kegView(key));
+        library.fetchFromRedis(key);
+        System.out.println(library.fetchFromRedis(key));
+        JSONObject jsonObject = library.fetchFromRedis(key);
+        BeerStyle style = new BeerStyle((JSONObject)jsonObject);
+        return ok(style.kegView());
     }
 
     public static Result prime() {
