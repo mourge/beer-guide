@@ -98,14 +98,13 @@ public class BeerStyle {
     }
 
     private String getRangeString(Range range) {
-        System.out.println(range);
         return String.format("%s - %s", range.upperBound, range.lowerBound);
     }
 
     public String fermenterView() {
         StringBuilder returnValue = new StringBuilder();
         returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style));
-        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.FERMTEMPKEY, fermtempString()));
+        returnValue.append(String.format("\"%s\":%s", BeerStyleStructure.FERMTEMPKEY, fermtemp()));
         returnValue.append("}");
         return returnValue.toString();
     }
@@ -114,7 +113,7 @@ public class BeerStyle {
         StringBuilder returnValue = new StringBuilder();
         returnValue.append(String.format("{\"%s\":\"%s\",", BeerStyleStructure.STYLEKEY, style));
         returnValue.append(String.format("\"%s\":\"%s\",", BeerStyleStructure.SERVPRESKEY, servingPressure));
-        returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.SERVTEMPKEY, servtemperature()));
+        returnValue.append(String.format("\"%s\":%s", BeerStyleStructure.SERVTEMPKEY, servtemperature()));
         returnValue.append("}");
         return returnValue.toString();
     }
@@ -128,9 +127,9 @@ public class BeerStyle {
         returnValue.append(String.format("\"%s\":%s", BeerStyleStructure.SERVTEMPKEY, servtemperature().toJSONString()));
         returnValue.append(String.format("\"%s\":%s,", BeerStyleStructure.OGKEY, og().toJSONString()));
         returnValue.append(String.format("\"%s\":%s,", BeerStyleStructure.FGKEY, fg().toJSONString()));
+        returnValue.append(String.format("\"%s\":%s,", BeerStyleStructure.IBUKEY, ibu().toJSONString()));
         returnValue.append(String.format("\"%s\":\"%s\"", BeerStyleStructure.SERVPRESKEY, servingPressure));
         returnValue.append("}");
-        System.out.println(returnValue.toString());
 
         return returnValue.toString();
     }

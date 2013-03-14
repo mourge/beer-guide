@@ -45,7 +45,8 @@ public class JsonLibrary {
     }
 
     public String getValue(String key) {
-        return fetchFromRedis(key).toJSONString();
+        String returnValue = fetchFromRedis(key).toString();;
+        return returnValue;
     }
 
     public JSONObject fetchFromRedis(String key) {

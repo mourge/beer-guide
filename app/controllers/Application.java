@@ -29,10 +29,7 @@ public class Application extends Controller {
     }
 
     public static Result kegView(String key) {
-        library.fetchFromRedis(key);
-        System.out.println(library.fetchFromRedis(key));
-        JSONObject jsonObject = library.fetchFromRedis(key);
-        BeerStyle style = new BeerStyle((JSONObject)jsonObject);
+        BeerStyle style = new BeerStyle(library.fetchFromRedis(key));
         return ok(style.kegView());
     }
 
