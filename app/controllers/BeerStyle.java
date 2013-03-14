@@ -4,21 +4,12 @@ import org.json.simple.JSONObject;
 
 public class BeerStyle {
     private class Range {
-        public String upperBound;
-        public String lowerBound;
+        public String upperBound, lowerBound;
     }
 
-    private String servingPressure;
-    private String style;
-    private String glass;
+    private String servingPressure, style, glass;
+    private Range fermtemp, servtemp, color, og, fg, ibu;
 
-    private Range fermtemp;
-    private Range servtemp;
-    private Range color;
-    private Range og;
-    private Range fg;
-    private Range ibu;
-    
     private Range setRange(String upperBound, String lowerBound) {
         Range range = new Range();
         range.upperBound = upperBound;
@@ -38,32 +29,16 @@ public class BeerStyle {
         return String.format("%d psi", servingPressure);
     }
 
-    public String fgString() {
-        return getRangeString(fg);
-    }
-
     public JSONObject fg() {
         return getRange(fg);
-    }
-
-    public String colorString() {
-        return getRangeString(color);
     }
 
     public JSONObject color() {
         return getRange(color);
     }
 
-    public String ogString() {
-        return getRangeString(og);
-    }
-
     public JSONObject og() {
         return getRange(og);
-    }
-
-    public String fermtempString() {
-        return getRangeString(fermtemp);
     }
 
     public JSONObject fermtemp() {
@@ -72,18 +47,6 @@ public class BeerStyle {
 
     public JSONObject servtemperature() {
         return getRange(servtemp);
-    }
-
-    public String servtemperatureString() {
-        return getRangeString(servtemp);
-    }
-
-    public String servPressure() {
-        return servingPressure;
-    }
-
-    public String ibuString() {
-        return getRangeString(ibu);
     }
 
     public JSONObject ibu() {
@@ -95,10 +58,6 @@ public class BeerStyle {
         returnObject.put("Upper", range.upperBound);
         returnObject.put("Lower", range.lowerBound);
         return returnObject;
-    }
-
-    private String getRangeString(Range range) {
-        return String.format("%s - %s", range.upperBound, range.lowerBound);
     }
 
     public String fermenterView() {

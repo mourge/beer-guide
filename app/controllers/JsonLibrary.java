@@ -1,13 +1,9 @@
 package controllers;
 
-
-import java.util.HashMap;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import redis.clients.jedis.Jedis;
-
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,7 +12,6 @@ import redis.clients.jedis.Jedis;
  * Time: 8:23 PM
  * To change this template use File | Settings | File Templates.
  */
-
 
 public class JsonLibrary {
     private static Jedis redisConnection;
@@ -45,7 +40,7 @@ public class JsonLibrary {
     }
 
     public String getValue(String key) {
-        String returnValue = fetchFromRedis(key).toString();;
+        String returnValue = fetchFromRedis(key).toString();
         return returnValue;
     }
 
@@ -77,7 +72,6 @@ public class JsonLibrary {
         jsonObject.put(BeerStyleStructure.STYLEKEY, style);
         jsonObject.put(BeerStyleStructure.GLASSKEY, glass);
         jsonObject.put(BeerStyleStructure.SERVPRESKEY, "10psi");
-
         jsonObject.put(BeerStyleStructure.COLORLKEY, getRangeJsonObject("lower", "upper"));
         jsonObject.put(BeerStyleStructure.FERMTEMPKEY, getRangeJsonObject("lower", "upper"));
         jsonObject.put(BeerStyleStructure.SERVTEMPKEY, getRangeJsonObject("lower", "upper"));
