@@ -29,6 +29,30 @@ public class BeerStyle {
         return String.format("%s", servingPressure);
     }
 
+    public String fgString() {
+        return fg().toString();
+    }
+
+    public String ogString() {
+        return og().toString();
+    }
+
+    public String colorString() {
+        return color().toString();
+    }
+
+    public String fermtempString() {
+        return fermtemp().toString();
+    }
+
+    public String servtemperatureString() {
+        return servtemperature().toString();
+    }
+
+    public String ibuString() {
+        return ibu().toString();
+    }
+
     public JSONObject fg() {
         return getRange(fg);
     }
