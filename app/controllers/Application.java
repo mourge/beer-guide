@@ -79,4 +79,10 @@ public class Application extends Controller {
         library.adjustLowerRange(style, key, newValue);
         return ok("Data adjusted\n");
     }
+
+    public static Result prettyPage(String key) {
+        BeerStyle style = new BeerStyle(library.fetchFromRedis(key));
+        return ok(views.html.test.render(style)
+        );
+    }
 }

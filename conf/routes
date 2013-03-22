@@ -5,6 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index()
 GET     /style/:style               controllers.Application.fullOutput(style: String)
+GET     /style/pretty/:style        controllers.Application.prettyPage(style: String)
 GET     /style/:style/fermenter     controllers.Application.fermenterView(style: String)
 GET     /style/:style/keg           controllers.Application.kegView(style: String)
 

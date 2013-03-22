@@ -17,16 +17,16 @@ public class BeerStyle {
         return range;
     }
 
-    private String glass() {
+    public String glass() {
         return glass;
     }
 
-    private String style() {
+    public String style() {
         return style;
     }
 
     public String servingPressure() {
-        return String.format("%d psi", servingPressure);
+        return String.format("%s", servingPressure);
     }
 
     public JSONObject fg() {
