@@ -1,0 +1,10 @@
+body {
+    background: gray;
+    font-family:Futura;
+}
+
+.highlighted {
+    cursor:pointer;
+    color:#0066FF;
+    background:white;
+}
