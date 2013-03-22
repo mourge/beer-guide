@@ -3,6 +3,10 @@ body {
     font-family:Futura;
 }
 
+h1 {
+    text-transform:capitalize;
+}
+
 .highlighted {
     cursor:pointer;
     color:#0066FF;
